@@ -1,8 +1,12 @@
+// Component Imports
 import { ProductCard } from "../components";
 import { useTitle } from "../hooks/useTitle";
 
 export const Home = () => {
+  // dynamically updating the tab title
   useTitle("Home");
+
+  // product objects array to show on the home screen
   const products = [
     {
       id: 1,
@@ -35,6 +39,7 @@ export const Home = () => {
       price: 29,
     },
   ];
+
   return (
     <main>
       <section className="products">

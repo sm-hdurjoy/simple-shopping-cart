@@ -1,9 +1,12 @@
+// Component Imports
 import { useTitle } from "../hooks/useTitle";
 import { CartCard } from "../components";
 import { useCart } from "../context/CartContext";
 
 export const Cart = () => {
-  const { total, cartList } = useCart();
+  const { total, cartList } = useCart(); // accessing the total price & cartList from Context API
+
+  // dynamically updating the tab title
   useTitle("Cart");
 
   return (

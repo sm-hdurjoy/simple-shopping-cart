@@ -1,10 +1,17 @@
+// Library imports
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/logo.png";
-import "./Header.css";
+
+// Component imports
 import { useCart } from "../context/CartContext";
 
+// Asset imports
+import Logo from "../assets/logo.png";
+
+// Style imports
+import "./Header.css";
+
 export const Header = () => {
-  const { cartList } = useCart();
+  const { cartList } = useCart(); // accessing cartList from Context API
 
   return (
     <header>

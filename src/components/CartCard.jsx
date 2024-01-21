@@ -1,11 +1,16 @@
-import "./CartCard.css";
-import Image from "../assets/images/002.jpg";
+// Component imports
 import { useCart } from "../context/CartContext";
 
-export const CartCard = ({ product }) => {
-  const { removeFromCart } = useCart();
+// Asset imports
+import Image from "../assets/images/002.jpg";
 
-  const { name, price } = product;
+// Style imports
+import "./CartCard.css";
+
+export const CartCard = ({ product }) => {
+  const { removeFromCart } = useCart(); // accessing removeFromCart function from Context API
+
+  const { name, price } = product; // Destructuring name and price from products
 
   return (
     <div className="cartCard">
